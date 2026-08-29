@@ -1,0 +1,30 @@
+{
+  "release":"2.7.0-rc1",
+  "courseId":"python",
+  "status":"release-candidate",
+  "qualityGates":{
+    "ciMustPass":true,
+    "jsonValidation":true,
+    "uniqueLessonIds":true,
+    "validChapterAndLevelReferences":true,
+    "validProjectReferences":true,
+    "assessmentBanksValidated":true,
+    "guidedProjectRubricsValidated":true,
+    "versionAlignment":true,
+    "completionPathValidated":true
+  },
+  "curriculumCoverage":[
+    "fundamentals",
+    "beginner",
+    "intermediate",
+    "advanced",
+    "specialist",
+    "project-based"
+  ],
+  "graduationRequirements":[
+    "all required lessons completed",
+    "required level projects completed",
+    "final exam passed",
+    "production capstone passed"
+  ]
+}
