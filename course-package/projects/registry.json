@@ -1,4 +1,5 @@
 [
+  {"id":"calculator","title":"ماشین حساب","track":"fundamentals"},
   {"id":"guess-number","title":"بازی حدس عدد","track":"fundamentals"},
   {"id":"shopping-cart","title":"سبد خرید","track":"fundamentals"},
   {"id":"calculator-functions","title":"ماشین حساب تابعی","track":"fundamentals"},
@@ -6,8 +7,10 @@
   {"id":"memory-contacts","title":"دفترچه مخاطبان حافظه‌ای","track":"fundamentals"},
   {"id":"contacts-json","title":"دفترچه مخاطبان JSON","track":"beginner"},
   {"id":"todo-cli","title":"Todo CLI","track":"beginner"},
+  {"id":"cli-finance","title":"مدیریت هزینه CLI","track":"beginner"},
   {"id":"invoice-domain","title":"Invoice Domain","track":"intermediate"},
   {"id":"order-domain","title":"Order Domain Model","track":"intermediate"},
+  {"id":"library-manager","title":"مدیریت کتابخانه","track":"intermediate"},
   {"id":"unit-converter-package","title":"Unit Converter Package","track":"advanced"},
   {"id":"inventory-tests","title":"Inventory Service Tests","track":"advanced"},
   {"id":"async-jobs","title":"Async Job Runner","track":"advanced"},
@@ -40,5 +43,13 @@
   {"id":"pytorch-classifier","title":"PyTorch Classifier","track":"ai"},
   {"id":"nlp-text-classifier","title":"NLP Text Classifier","track":"ai"},
   {"id":"vision-image-classifier","title":"Vision Image Classifier","track":"ai"},
-  {"id":"model-serving-api","title":"Model Serving API","track":"ai"}
+  {"id":"model-serving-api","title":"Model Serving API","track":"ai"},
+  {"id":"desktop-crm","title":"CRM دسکتاپ","track":"portfolio"},
+  {"id":"fastapi-crm","title":"CRM API","track":"portfolio"},
+  {"id":"django-commerce","title":"فروشگاه Django","track":"portfolio"},
+  {"id":"scraper-monitor","title":"مانیتور تغییرات وب مجاز","track":"portfolio"},
+  {"id":"data-dashboard","title":"داشبورد تحلیل فروش","track":"portfolio"},
+  {"id":"ml-predictor","title":"پیش‌بینی با ML","track":"portfolio"},
+  {"id":"rag-assistant","title":"دستیار RAG","track":"portfolio"},
+  {"id":"production-capstone","title":"سیستم Production نهایی","track":"project-based"}
 ]
