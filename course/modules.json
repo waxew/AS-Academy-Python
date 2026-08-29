@@ -1,0 +1,8 @@
+{
+  "modules": [
+    {"id":"foundations","order":1,"title":"مبانی","required":true},
+    {"id":"beginner","order":2,"title":"مقدماتی","required":true},
+    {"id":"advanced","order":3,"title":"پیشرفته","required":true},
+    {"id":"specialized","order":4,"title":"تخصصی","required":true}
+  ]
+}
