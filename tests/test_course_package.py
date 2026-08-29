@@ -95,6 +95,31 @@ def test_lesson_required_fields_and_block_ids() -> None:
         assert len(block_ids) == len(set(block_ids)), f"duplicate block ids in {lesson['id']}"
 
 
+def test_project_references_are_registered() -> None:
+    """Every PROJECT block must point to a stable project identity in the registry."""
+    registry = load_json(PACKAGE / "projects/registry.json")
+    registered = {project["id"] for project in registry}
+    duplicates = sorted(key for key, count in Counter(p["id"] for p in registry).items() if count > 1)
+    assert not duplicates, f"duplicate project registry ids: {duplicates}"
+
+    invalid: list[tuple[str, str]] = []
+    for lesson in all_lessons():
+        for block in lesson.get("blocks", []):
+            if block.get("type") != "PROJECT":
+                continue
+            project_id = block.get("metadata", {}).get("projectId")
+            if not project_id or project_id not in registered:
+                invalid.append((lesson["id"], str(project_id)))
+    assert not invalid, f"unregistered project references: {invalid}"
+
+
+def test_completion_version_matches_manifest() -> None:
+    """Graduation rules must describe the same content release as the manifest."""
+    manifest_version = load_json(PACKAGE / "manifest.json")["version"]
+    completion_version = load_json(PACKAGE / "completion.json")["courseVersion"]
+    assert completion_version == manifest_version
+
+
 def test_manifest_and_python_package_versions_match() -> None:
     """Release metadata must not drift between content and the Python helper package."""
     manifest_version = load_json(PACKAGE / "manifest.json")["version"]
