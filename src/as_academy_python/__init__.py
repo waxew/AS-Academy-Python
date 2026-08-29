@@ -1,3 +1,4 @@
 """AS Academy Python course examples package."""
 
-__version__ = "1.0.0"
+# Keep this package version aligned with the app-facing Course Package release.
+__version__ = "2.1.0"
