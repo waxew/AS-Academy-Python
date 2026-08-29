@@ -1,5 +1,5 @@
 {
-  "courseVersion":"2.2.0",
+  "courseVersion":"2.3.0",
   "requiredPath":["python-fundamentals","python-beginner","python-intermediate","python-advanced","python-specialist","python-projects"],
   "graduation":{"minimumFinalExamPercent":70,"capstoneRequired":true,"requiredLevelProjects":true},
   "certificateEligibility":{"allRequiredLessons":true,"allRequiredProjects":true,"finalExamPassed":true,"capstonePassed":true},
