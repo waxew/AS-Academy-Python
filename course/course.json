@@ -1,0 +1,12 @@
+{
+  "id": "python",
+  "slug": "python",
+  "title": "Python / پایتون",
+  "version": "1.0.0",
+  "language": "fa",
+  "codeLanguage": "python",
+  "levels": ["foundations", "beginner", "advanced", "specialized"],
+  "coreRepository": "as-academy-core",
+  "minimumPython": "3.11",
+  "offlineContent": true
+}
