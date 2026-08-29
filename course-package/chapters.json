@@ -1,0 +1,12 @@
+[
+  {"id":"py-f-01","levelId":"python-fundamentals","title":"شروع کار با پایتون","description":"نصب، اجرا، Syntax و اولین برنامه","order":1},
+  {"id":"py-f-02","levelId":"python-fundamentals","title":"داده و منطق برنامه","description":"متغیر، نوع داده، عملگر، شرط و حلقه","order":2},
+  {"id":"py-f-03","levelId":"python-fundamentals","title":"ساختمان داده و تابع","description":"String، List، Tuple، Set، Dictionary و Function","order":3},
+  {"id":"py-b-01","levelId":"python-beginner","title":"کدنویسی چندفایلی","description":"Module، Package، File، JSON و CSV","order":1},
+  {"id":"py-b-02","levelId":"python-beginner","title":"خطا و کیفیت کد","description":"Exception، Debugging و Comprehension","order":2},
+  {"id":"py-i-01","levelId":"python-intermediate","title":"شی‌گرایی","description":"Class، Object، Inheritance و Composition","order":1},
+  {"id":"py-a-01","levelId":"python-advanced","title":"پایتون پیشرفته","description":"Generator، Decorator، Context Manager، AsyncIO و Testing","order":1},
+  {"id":"py-s-01","levelId":"python-specialist","title":"Backend و Database","description":"SQL، FastAPI، Django و REST","order":1},
+  {"id":"py-s-02","levelId":"python-specialist","title":"Data و AI","description":"Pandas، ML، LLM و RAG","order":2},
+  {"id":"py-p-01","levelId":"python-projects","title":"پروژه‌های نهایی","description":"پروژه‌های واقعی از CLI تا SaaS","order":1}
+]
