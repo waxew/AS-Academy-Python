@@ -1,0 +1,16 @@
+[
+  {"id":"q001","topic":"types","question":"خروجی input در Python چه نوعی است؟","choices":["str","int","float","bool"],"answer":"str"},
+  {"id":"q002","topic":"conditions","question":"برای شرط جایگزین بعدی از چه کلمه‌ای استفاده می‌شود؟","choices":["elif","elseif","case","then"],"answer":"elif"},
+  {"id":"q003","topic":"collections","question":"کدام collection فقط مقادیر یکتا نگه می‌دارد؟","choices":["set","list","tuple","dict value"],"answer":"set"},
+  {"id":"q004","topic":"functions","question":"برای بازگرداندن نتیجه تابع از چه کلمه‌ای استفاده می‌شود؟","choices":["return","yield always","send","result"],"answer":"return"},
+  {"id":"q005","topic":"exceptions","question":"خطای int('abc') چیست؟","choices":["ValueError","TypeError","KeyError","IOError"],"answer":"ValueError"},
+  {"id":"q006","topic":"oop","question":"رابطه has-a معمولاً با کدام مفهوم مدل می‌شود؟","choices":["Composition","Inheritance","Recursion","Closure"],"answer":"Composition"},
+  {"id":"q007","topic":"generator","question":"کدام کلمه مقدار generator را تولید می‌کند؟","choices":["yield","return only","emit","next"],"answer":"yield"},
+  {"id":"q008","topic":"asyncio","question":"برای منتظر ماندن coroutine از چه کلمه‌ای استفاده می‌شود؟","choices":["await","waitfor","sleep only","yield"],"answer":"await"},
+  {"id":"q009","topic":"sql","question":"برای ترکیب ردیف‌های دو جدول بر اساس رابطه از چه چیزی استفاده می‌شود؟","choices":["JOIN","GROUP","SORT","INDEX"],"answer":"JOIN"},
+  {"id":"q010","topic":"http","question":"برای ایجاد resource جدید معمولاً کدام method استفاده می‌شود؟","choices":["POST","GET","HEAD","OPTIONS"],"answer":"POST"},
+  {"id":"q011","topic":"security","question":"Password باید چگونه ذخیره شود؟","choices":["با password hashing مناسب","plaintext","base64","داخل source code"],"answer":"با password hashing مناسب"},
+  {"id":"q012","topic":"ml","question":"برای ارزیابی مدل باید داده test چگونه باشد؟","choices":["در training استفاده نشده باشد","همان training data باشد","همیشه خالی باشد","فقط یک ردیف باشد"],"answer":"در training استفاده نشده باشد"},
+  {"id":"q013","topic":"rag","question":"وظیفه retrieval در RAG چیست؟","choices":["بازیابی context مرتبط","ساخت UI","hash password","compile Python"],"answer":"بازیابی context مرتبط"},
+  {"id":"q014","topic":"docker","question":"Docker image چیست؟","choices":["قالب immutable برای ساخت container","database table","Python thread","Git branch"],"answer":"قالب immutable برای ساخت container"}
+]

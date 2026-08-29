@@ -1,0 +1,17 @@
+[
+  {"id":"ex-001","level":"FUNDAMENTALS","topic":"variables","title":"اطلاعات کاربر","prompt":"نام، سن و شهر را دریافت و به شکل خوانا چاپ کنید.","difficulty":"easy"},
+  {"id":"ex-002","level":"FUNDAMENTALS","topic":"operators","title":"محاسبه تخفیف","prompt":"قیمت و درصد تخفیف را دریافت و قیمت نهایی را محاسبه کنید.","difficulty":"easy"},
+  {"id":"ex-003","level":"FUNDAMENTALS","topic":"condition","title":"زوج یا فرد","prompt":"عدد را دریافت و زوج یا فرد بودن را تشخیص دهید.","difficulty":"easy"},
+  {"id":"ex-004","level":"FUNDAMENTALS","topic":"loops","title":"جدول ضرب","prompt":"جدول ضرب عدد ورودی را از 1 تا 10 چاپ کنید.","difficulty":"easy"},
+  {"id":"ex-005","level":"FUNDAMENTALS","topic":"collections","title":"حذف تکراری‌ها","prompt":"لیست اعداد را بدون مقادیر تکراری و مرتب برگردانید.","difficulty":"medium"},
+  {"id":"ex-006","level":"BEGINNER","topic":"json","title":"ذخیره تنظیمات","prompt":"تنظیمات کاربر را در JSON ذخیره و دوباره بارگذاری کنید.","difficulty":"medium"},
+  {"id":"ex-007","level":"BEGINNER","topic":"exceptions","title":"ورودی مقاوم","prompt":"تا زمان ورود عدد معتبر، دریافت ورودی را تکرار کنید.","difficulty":"medium"},
+  {"id":"ex-008","level":"INTERMEDIATE","topic":"oop","title":"حساب بانکی","prompt":"BankAccount با deposit، withdraw و جلوگیری از موجودی منفی بسازید.","difficulty":"medium"},
+  {"id":"ex-009","level":"INTERMEDIATE","topic":"generator","title":"خواندن lazy","prompt":"Generator برای خواندن خط‌به‌خط فایل طراحی کنید.","difficulty":"advanced"},
+  {"id":"ex-010","level":"ADVANCED","topic":"decorator","title":"اندازه‌گیری زمان","prompt":"Decorator برای ثبت زمان اجرای تابع بسازید.","difficulty":"advanced"},
+  {"id":"ex-011","level":"ADVANCED","topic":"asyncio","title":"اجرای هم‌زمان","prompt":"پنج task شبیه‌سازی‌شده را با asyncio.gather اجرا کنید.","difficulty":"advanced"},
+  {"id":"ex-012","level":"SPECIALIST","topic":"sql","title":"گزارش فروش","prompt":"Query برای فروش کل هر مشتری با JOIN و GROUP BY بنویسید.","difficulty":"specialist"},
+  {"id":"ex-013","level":"SPECIALIST","topic":"fastapi","title":"CRUD کالا","prompt":"endpointهای create/read/update/delete برای Product پیاده کنید.","difficulty":"specialist"},
+  {"id":"ex-014","level":"SPECIALIST","topic":"pandas","title":"پاک‌سازی داده","prompt":"مقادیر null و ردیف‌های تکراری dataset فروش را مدیریت کنید.","difficulty":"specialist"},
+  {"id":"ex-015","level":"SPECIALIST","topic":"rag","title":"ارزیابی retrieval","prompt":"برای 10 سؤال، chunk مورد انتظار و chunk بازیابی‌شده را مقایسه و recall بنویسید.","difficulty":"specialist"}
+]
