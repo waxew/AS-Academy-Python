@@ -57,22 +57,14 @@ def test_lesson_ids_are_unique() -> None:
 def test_lessons_reference_existing_chapters() -> None:
     """Prevent lessons from becoming unreachable because of a bad chapter reference."""
     chapter_ids = {chapter["id"] for chapter in load_json(PACKAGE / "chapters.json")}
-    invalid = sorted(
-        (lesson["id"], lesson.get("chapterId"))
-        for lesson in all_lessons()
-        if lesson.get("chapterId") not in chapter_ids
-    )
+    invalid = sorted((lesson["id"], lesson.get("chapterId")) for lesson in all_lessons() if lesson.get("chapterId") not in chapter_ids)
     assert not invalid, f"invalid chapter references: {invalid}"
 
 
 def test_chapters_reference_existing_levels() -> None:
     """All chapters must belong to one of the Core-aligned course levels."""
     level_ids = {level["id"] for level in load_json(PACKAGE / "levels.json")}
-    invalid = sorted(
-        (chapter["id"], chapter.get("levelId"))
-        for chapter in load_json(PACKAGE / "chapters.json")
-        if chapter.get("levelId") not in level_ids
-    )
+    invalid = sorted((chapter["id"], chapter.get("levelId")) for chapter in load_json(PACKAGE / "chapters.json") if chapter.get("levelId") not in level_ids)
     assert not invalid, f"invalid level references: {invalid}"
 
 
@@ -104,15 +96,13 @@ def test_project_references_are_registered() -> None:
     registered = {project["id"] for project in registry}
     duplicates = sorted(key for key, count in Counter(p["id"] for p in registry).items() if count > 1)
     assert not duplicates, f"duplicate project registry ids: {duplicates}"
-
     invalid: list[tuple[str, str]] = []
     for lesson in all_lessons():
         for block in lesson.get("blocks", []):
-            if block.get("type") != "PROJECT":
-                continue
-            project_id = block.get("metadata", {}).get("projectId")
-            if not project_id or project_id not in registered:
-                invalid.append((lesson["id"], str(project_id)))
+            if block.get("type") == "PROJECT":
+                project_id = block.get("metadata", {}).get("projectId")
+                if not project_id or project_id not in registered:
+                    invalid.append((lesson["id"], str(project_id)))
     assert not invalid, f"unregistered project references: {invalid}"
 
 
@@ -122,9 +112,24 @@ def test_all_project_collections_are_registered() -> None:
     catalog_ids = {project["id"] for project in load_json(PACKAGE / "projects/catalog.json")}
     final_ids = {project["id"] for project in load_json(PACKAGE / "projects/final-projects.json")}
     recommended = set(load_json(PACKAGE / "completion.json")["recommendedPortfolio"])
-    assert catalog_ids <= registered, f"catalog projects missing from registry: {sorted(catalog_ids - registered)}"
-    assert final_ids <= registered, f"final projects missing from registry: {sorted(final_ids - registered)}"
-    assert recommended <= registered, f"recommended projects missing from registry: {sorted(recommended - registered)}"
+    assert catalog_ids <= registered
+    assert final_ids <= registered
+    assert recommended <= registered
+
+
+def test_guided_projects_have_complete_learning_contracts() -> None:
+    """Guided projects need milestones, measurable acceptance criteria and a 100-point rubric."""
+    registered = {project["id"] for project in load_json(PACKAGE / "projects/registry.json")}
+    guides = load_json(PACKAGE / "projects/guided/portfolio-guides.json")
+    ids = [guide["projectId"] for guide in guides]
+    assert len(ids) == len(set(ids))
+    for guide in guides:
+        assert guide["projectId"] in registered
+        assert guide["level"] in VALID_LEVEL_TYPES
+        assert guide["estimatedHours"] > 0
+        assert len(guide["milestones"]) >= 4
+        assert len(guide["acceptanceCriteria"]) >= 4
+        assert sum(guide["rubric"].values()) == 100, f"rubric must total 100: {guide['projectId']}"
 
 
 def test_exercise_and_quiz_banks_are_well_formed() -> None:
@@ -151,9 +156,7 @@ def test_completion_path_matches_levels() -> None:
 
 def test_completion_version_matches_manifest() -> None:
     """Graduation rules must describe the same content release as the manifest."""
-    manifest_version = load_json(PACKAGE / "manifest.json")["version"]
-    completion_version = load_json(PACKAGE / "completion.json")["courseVersion"]
-    assert completion_version == manifest_version
+    assert load_json(PACKAGE / "completion.json")["courseVersion"] == load_json(PACKAGE / "manifest.json")["version"]
 
 
 def test_manifest_and_python_package_versions_match() -> None:
