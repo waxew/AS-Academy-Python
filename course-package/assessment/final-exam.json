@@ -1,0 +1,14 @@
+{
+  "id":"python-final-exam","title":"آزمون جامع Python","passingPercent":70,"questions":[
+    {"id":"f1","question":"کدام collection برای key/value مناسب است؟","choices":["dict","set","tuple","range"],"answer":"dict"},
+    {"id":"f2","question":"برای مدیریت resource چه الگویی مناسب است؟","choices":["context manager","global variable","nested print","magic number"],"answer":"context manager"},
+    {"id":"f3","question":"برای I/O هم‌زمان زیاد کدام گزینه مناسب است؟","choices":["asyncio","فقط recursion","XML","dataclass"],"answer":"asyncio"},
+    {"id":"f4","question":"برای جلوگیری از SQL injection چه باید کرد؟","choices":["query پارامتری","string concatenation","ثبت password در log","base64"],"answer":"query پارامتری"},
+    {"id":"f5","question":"Service Layer چه چیزی را جدا می‌کند؟","choices":["business logic از transport/storage","CSS از HTML","CPU از RAM","Git از GitHub"],"answer":"business logic از transport/storage"},
+    {"id":"f6","question":"Data leakage چه اثری دارد؟","choices":["ارزیابی غیرواقعی مدل","بهبود واقعی production همیشه","حذف test set","ساخت index SQL"],"answer":"ارزیابی غیرواقعی مدل"},
+    {"id":"f7","question":"در RAG retrieval چه می‌کند؟","choices":["context مرتبط را بازیابی می‌کند","password hash می‌کند","container می‌سازد","migration اجرا می‌کند"],"answer":"context مرتبط را بازیابی می‌کند"},
+    {"id":"f8","question":"هدف migration چیست؟","choices":["تغییر کنترل‌شده schema","اجرای thread","تغییر timezone","ساخت prompt"],"answer":"تغییر کنترل‌شده schema"},
+    {"id":"f9","question":"Mock در unit test چه کاربردی دارد؟","choices":["جایگزینی dependency خارجی","تغییر syntax Python","ساخت database واقعی اجباری","جایگزینی assert"],"answer":"جایگزینی dependency خارجی"},
+    {"id":"f10","question":"Secret production کجا باید باشد؟","choices":["خارج source و در secret/config امن","README عمومی","داخل token.py commit شده","داخل log"],"answer":"خارج source و در secret/config امن"}
+  ]
+}
