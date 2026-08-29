@@ -1,104 +1,102 @@
 # AS Academy Python
 
-مرجع جامع آموزش زبان برنامه‌نویسی Python از صفر تا سطح تخصصی.
+دوره جامع و پروژه‌محور Python در AS Academy؛ از اولین خط کد تا طراحی، تست و استقرار سیستم‌های Production.
 
-## مسیر آموزشی
+> محتوای اختصاصی Python در این repository نگهداری می‌شود. زیرساخت مشترک برنامه آموزشی شامل Navigation، Design System، Progress، Quiz/Exercise Engine، Search، Bookmark، Settings و Content Runtime در `AS-Academy-Core` قرار دارد.
 
-### 01 — مبانی
-- معرفی Python، تاریخچه و کاربردها
-- نصب Python در Windows، Linux و macOS
-- راه‌اندازی VS Code و PyCharm
-- اجرای فایل‌های `.py` و کار با Interpreter
-- Syntax، Statement، Expression و Comment
-- متغیرها و انواع داده
-- `print()` و `input()`
-- تبدیل نوع داده‌ها
-- رشته‌ها و f-string
-- عملگرهای ریاضی، مقایسه‌ای و منطقی
+## نسخه دوره
 
-### 02 — مقدماتی
-- شرط‌های `if / elif / else`
-- حلقه‌های `for / while`
-- `break`، `continue` و `pass`
-- List، Tuple، Set و Dictionary
-- String methods و slicing
-- Function، Parameter، Argument و Return
-- Scope، Lambda، `*args` و `**kwargs`
+Current curriculum: **2.5.x → Final Curriculum hardening**
 
-### 03 — پیشرفته
-- Object-Oriented Programming (OOP)
-- Class، Object، Inheritance، Encapsulation و Polymorphism
-- Exception Handling
-- File I/O
-- CSV، JSON و XML
-- Modules و Packages
-- pip، PyPI و Virtual Environment
-- Iterator، Generator و Decorator
-- Regular Expressions
-- Logging و Debugging
+منبع اصلی محتوای قابل مصرف توسط برنامه: `course-package/`
 
-### 04 — تخصصی
-- SQLite، MySQL و PostgreSQL
-- SQLAlchemy و ORM
-- Tkinter، CustomTkinter، PyQt و PySide
-- Flask، FastAPI و Django
-- REST API و Authentication
-- Web Scraping و Automation
-- Telegram و Discord Bots
-- NumPy، Pandas و Matplotlib
-- Machine Learning با scikit-learn
-- TensorFlow، PyTorch، NLP و Computer Vision
-- LLM، Embeddings، Vector Database و RAG
-- Network Programming
-- Threading، Multiprocessing و asyncio
-- Testing با unittest و pytest
-- Secure Coding
-- Docker، CI/CD و Deployment
+## مسیر شش‌سطحی
 
-## پروژه‌های عملی
-1. ماشین حساب
-2. تبدیل واحد و دما
-3. بازی حدس عدد
-4. Password Generator
-5. دفترچه تلفن
-6. To-Do List
-7. مدیریت هزینه شخصی
-8. مدیریت دانش‌آموز و نمرات
-9. مدیریت کتابخانه
-10. مدیریت مشتریان
-11. مدیریت انبار
-12. سیستم فروش و فاکتور
-13. نرم‌افزار حسابداری
-14. REST API
-15. Telegram Bot
-16. وب‌سایت Flask
-17. وب‌سایت Django
-18. Web Scraper
-19. داشبورد تحلیل داده
-20. پروژه Machine Learning
-21. چت‌بات هوش مصنوعی
-22. سامانه RAG
-23. پروژه نهایی Full-Stack / SaaS مبتنی بر Python
+### 1. Fundamentals — مبانی
+Python و نصب محیط، Syntax، متغیر و Type، I/O، String، Operator، Condition، Loop، Collection و Function.
 
-## ساختار مخزن
+### 2. Beginner — مقدماتی
+Module/Package، venv/pip، pathlib، File I/O، JSON/CSV/XML، Exception، Debugging/Logging و Comprehension.
+
+### 3. Intermediate — متوسط
+OOP، Composition/Inheritance، Dataclass، Value Object، Type Hints، Protocol/Generic، Iterator، Generator و Domain Modeling.
+
+### 4. Advanced — پیشرفته
+Decorator، Closure، Context Manager، Object/Memory Model، Standard Library حرفه‌ای، Threading/Lock/Queue، Multiprocessing، AsyncIO، Testing، Packaging، Profiling، Complexity و Algorithmic Thinking.
+
+### 5. Specialist — تخصصی
+- Database: SQLite، PostgreSQL، MySQL، SQL Server، SQLAlchemy، ORM، Migration، Transaction و Index
+- Backend: HTTP/REST، Flask، FastAPI، Django/DRF، Validation، OAuth2/JWT/RBAC، WebSocket
+- Desktop: Tkinter، CustomTkinter، PySide/PyQt و معماری UI
+- Automation: Requests، BeautifulSoup، Selenium، Playwright و resilient automation
+- Bots: Telegram و Discord، command/event/state architecture
+- Data: NumPy، Pandas، Matplotlib، data cleaning و analysis
+- ML: scikit-learn، feature engineering، leakage، evaluation
+- Deep Learning: PyTorch، TensorFlow/Keras
+- NLP/AI: Transformers/Hugging Face، LLM، Embedding، Vector DB، RAG، AI Agents و evaluation
+- Vision: OpenCV و image inference
+- Network/Security: Socket، TCP/UDP، TLS، validation، secret management و secure coding
+- Production: Linux/SSH، Uvicorn/Gunicorn، Nginx، Docker/Compose، CI/CD، Cloud/VPS، Observability، Backup/Restore و Rollback
+
+### 6. Project-Based — پروژه‌محور
+پروژه‌های مرحله‌ای، Guided Projects، Portfolio، Final Exam و Production Capstone.
+
+## سیستم یادگیری
+
+```text
+Level
+  -> Chapter
+    -> Lesson
+      -> Code Example
+      -> Exercise
+      -> Quiz
+    -> Review Checkpoint
+  -> Level Project
+-> Final Exam
+-> Guided Portfolio
+-> Production Capstone
+```
+
+دوره علاوه بر درس از Exercise Bank، Quiz Bank، Final Exam، Guided Project Rubrics و Spaced Practice استفاده می‌کند.
+
+## پروژه‌ها
+
+پروژه‌ها از ماشین‌حساب، Todo و مدیریت نمره شروع می‌شوند و تا Library/Inventory، Desktop CRM، Billing API، Django، Automation، Bots، Data Dashboard، ML، PyTorch، RAG و Production Capstone ادامه دارند.
+
+Guided Projectها دارای Milestone، Acceptance Criteria، زمان تقریبی و Rubric صد امتیازی هستند.
+
+## ساختار اصلی
 
 ```text
 AS-Academy-Python/
-├── 01-foundations/
-├── 02-beginner/
-├── 03-advanced/
-├── 04-specialized/
+├── course-package/
+│   ├── manifest.json
+│   ├── levels.json
+│   ├── chapters.json
+│   ├── lessons/
+│   ├── exercises/
+│   ├── quizzes/
+│   ├── assessment/
+│   ├── projects/
+│   ├── review/
+│   ├── glossary.json
+│   └── completion.json
+├── src/
+├── tests/
+├── docs/
 ├── exercises/
 ├── projects/
-├── examples/
-├── docs/
 ├── cheatsheets/
-├── tests/
+├── pyproject.toml
 └── README.md
 ```
 
-## استاندارد هر درس
-هر درس در نسخه کامل دوره شامل هدف درس، پیش‌نیازها، توضیح مفهومی، Syntax، مثال کدنویسی، کامنت‌های توضیحی داخل سورس، اشتباهات رایج، تمرین مرحله‌ای، راهنمای تمرین، Mini Project، آزمون پایان درس و منابع تکمیلی خواهد بود.
+## کیفیت محتوا
 
-## AS Academy
-این مخزن بخشی از مجموعه آموزشی AS Academy است و با هدف ایجاد یک مسیر آموزشی منظم از مبانی تا مباحث تخصصی Python توسعه داده می‌شود.
+CI صحت JSON، شناسه درس‌ها، Chapter/Level references، Core block types، Project Registry، Assessment Bank، Completion Path، Version Alignment و قرارداد Guided Projectها را کنترل می‌کند.
+
+معیار نهایی دوره در `docs/FINAL_QUALITY_GATE.md` تعریف شده است.
+
+## هدف نهایی
+
+فارغ‌التحصیل مسیر کامل باید بتواند مسئله را تحلیل کند، Python تمیز بنویسد، داده و دیتابیس را مدیریت کند، تست بنویسد، API یا برنامه کاربردی بسازد، امنیت پایه را رعایت کند، سیستم را containerize/deploy کند و حداقل یک پروژه Production قابل دفاع در Portfolio داشته باشد.
