@@ -15,6 +15,9 @@ VALID_BLOCK_TYPES = {
     "WARNING", "NOTE", "IMPORTANT", "EXERCISE", "QUIZ", "PROJECT",
     "DIAGRAM", "REFERENCE",
 }
+VALID_LEVEL_TYPES = {
+    "FUNDAMENTALS", "BEGINNER", "INTERMEDIATE", "ADVANCED", "SPECIALIST", "PROJECT_BASED"
+}
 
 
 def load_json(path: Path):
@@ -111,6 +114,39 @@ def test_project_references_are_registered() -> None:
             if not project_id or project_id not in registered:
                 invalid.append((lesson["id"], str(project_id)))
     assert not invalid, f"unregistered project references: {invalid}"
+
+
+def test_all_project_collections_are_registered() -> None:
+    """Catalog, portfolio and completion references must use canonical project identities."""
+    registered = {project["id"] for project in load_json(PACKAGE / "projects/registry.json")}
+    catalog_ids = {project["id"] for project in load_json(PACKAGE / "projects/catalog.json")}
+    final_ids = {project["id"] for project in load_json(PACKAGE / "projects/final-projects.json")}
+    recommended = set(load_json(PACKAGE / "completion.json")["recommendedPortfolio"])
+    assert catalog_ids <= registered, f"catalog projects missing from registry: {sorted(catalog_ids - registered)}"
+    assert final_ids <= registered, f"final projects missing from registry: {sorted(final_ids - registered)}"
+    assert recommended <= registered, f"recommended projects missing from registry: {sorted(recommended - registered)}"
+
+
+def test_exercise_and_quiz_banks_are_well_formed() -> None:
+    """Assessment banks need stable unique IDs and valid answer contracts."""
+    exercises = load_json(PACKAGE / "exercises/bank.json")
+    quizzes = load_json(PACKAGE / "quizzes/bank.json")
+    exercise_ids = [item["id"] for item in exercises]
+    quiz_ids = [item["id"] for item in quizzes]
+    assert len(exercise_ids) == len(set(exercise_ids))
+    assert len(quiz_ids) == len(set(quiz_ids))
+    assert all(item["level"] in VALID_LEVEL_TYPES for item in exercises)
+    for quiz in quizzes:
+        assert len(quiz["choices"]) >= 2
+        assert quiz["answer"] in quiz["choices"], f"invalid answer in {quiz['id']}"
+
+
+def test_completion_path_matches_levels() -> None:
+    """Graduation path must reference every real level exactly once and no unknown level."""
+    level_ids = [level["id"] for level in load_json(PACKAGE / "levels.json")]
+    required_path = load_json(PACKAGE / "completion.json")["requiredPath"]
+    assert len(required_path) == len(set(required_path))
+    assert set(required_path) == set(level_ids)
 
 
 def test_completion_version_matches_manifest() -> None:
