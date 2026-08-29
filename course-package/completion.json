@@ -1,7 +1,7 @@
 {
-  "courseVersion":"2.0.0",
+  "courseVersion":"2.2.0",
   "requiredPath":["python-fundamentals","python-beginner","python-intermediate","python-advanced","python-specialist","python-projects"],
   "graduation":{"minimumFinalExamPercent":70,"capstoneRequired":true,"requiredLevelProjects":true},
   "certificateEligibility":{"allRequiredLessons":true,"allRequiredProjects":true,"finalExamPassed":true,"capstonePassed":true},
-  "recommendedPortfolio":["todo-cli","invoice-domain","inventory-tests","billing-api","sales-analysis","academy-rag","capstone-production"]
+  "recommendedPortfolio":["todo-cli","invoice-domain","inventory-tests","billing-api","sales-analysis","academy-rag","pytorch-classifier","capstone-production"]
 }
