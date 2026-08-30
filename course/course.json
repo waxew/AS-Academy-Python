@@ -2,11 +2,15 @@
   "id": "python",
   "slug": "python",
   "title": "Python / پایتون",
-  "version": "1.0.0",
+  "version": "2.7.0",
   "language": "fa",
   "codeLanguage": "python",
-  "levels": ["foundations", "beginner", "advanced", "specialized"],
-  "coreRepository": "as-academy-core",
+  "levels": ["python-fundamentals", "python-beginner", "python-intermediate", "python-advanced", "python-specialist", "python-projects"],
+  "coreRepository": "AS-Academy-Core",
   "minimumPython": "3.11",
-  "offlineContent": true
+  "offlineContent": true,
+  "legacyCompatibility": true,
+  "canonicalManifest": "course-package/manifest.json",
+  "canonicalLevels": "course-package/levels.json",
+  "note": "Compatibility metadata only. New consumers must use course-package/."
 }
