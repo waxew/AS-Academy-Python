@@ -14,8 +14,7 @@ VALID_LEVEL_TYPES = {"FUNDAMENTALS","BEGINNER","INTERMEDIATE","ADVANCED","SPECIA
 
 
 def load_json(path: Path):
-    with path.open(encoding="utf-8") as handle:
-        return json.load(handle)
+    with path.open(encoding="utf-8") as handle: return json.load(handle)
 
 
 def lesson_files() -> list[Path]: return sorted(LESSONS.glob("*.json"))
@@ -118,10 +117,23 @@ def test_learning_outcomes_cover_every_level_and_valid_prerequisites():
     assert [x["levelId"] for x in entries]==levels
     seen=set()
     for entry in entries:
-        assert len(entry["outcomes"])>=5 and len(entry["evidence"])>=3
-        assert set(entry["prerequisites"])<=seen
-        assert all(item.strip() for item in entry["outcomes"])
-        seen.add(entry["levelId"])
+        assert len(entry["outcomes"])>=5 and len(entry["evidence"])>=3; assert set(entry["prerequisites"])<=seen; assert all(item.strip() for item in entry["outcomes"]); seen.add(entry["levelId"])
+
+
+def test_manifest_matches_current_core_contract_defaults():
+    manifest=load_json(PACKAGE/"manifest.json")
+    assert manifest["defaultLocale"]=="fa" and manifest["supportedLocales"]==["fa"]
+    assert manifest["curriculumVersion"]==manifest["version"] and manifest["publisherId"]=="as-team"
+    assert manifest["packageSha256"] is None
+    for capability in ("bookmarks","userNotes","achievements","offlineContent"): assert capability in manifest["capabilities"]
+
+
+def test_legacy_metadata_is_explicitly_compatibility_only_and_aligned():
+    legacy=load_json(ROOT/"course/course.json"); modules=load_json(ROOT/"course/modules.json"); levels=[x["id"] for x in load_json(PACKAGE/"levels.json")]
+    assert legacy["legacyCompatibility"] is True and legacy["canonicalManifest"]=="course-package/manifest.json"
+    assert legacy["version"]==load_json(PACKAGE/"manifest.json")["version"] and legacy["levels"]==levels
+    assert modules["legacyCompatibility"] is True and modules["canonicalSource"]=="course-package/levels.json"
+    assert [x["id"] for x in modules["modules"]]==levels
 
 
 def test_completion_path_matches_levels():
