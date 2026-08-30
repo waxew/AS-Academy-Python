@@ -1,8 +1,11 @@
 """Integrity checks for the app-facing AS Academy Python Course Package."""
+
 from __future__ import annotations
+
 import json
 from collections import Counter
 from pathlib import Path
+
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "course-package"
 LESSONS = PACKAGE / "lessons"
