@@ -16,3 +16,28 @@ jobs:
       - run: pip install -e .[dev]
       - run: ruff check .
       - run: pytest -q
+      - name: Build verified source package
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/AS-Academy-Python-2.7.0-source.zip HEAD
+          cat > dist/info.txt <<EOF
+          AS Academy Python
+          Version: 2.7.0
+          Commit: ${GITHUB_SHA}
+          Branch: ${GITHUB_REF_NAME}
+          Python: 3.11+
+          Course package: course-package/
+          Core runtime: AS-Academy-Core
+          CI: ruff + pytest verified before packaging
+          EOF
+          (cd dist && sha256sum AS-Academy-Python-2.7.0-source.zip > SHA256SUMS.txt)
+      - name: Upload verified final package
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: AS-Academy-Python-2.7.0-final
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
