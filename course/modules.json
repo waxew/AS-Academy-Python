@@ -1,8 +1,12 @@
 {
+  "legacyCompatibility": true,
+  "canonicalSource": "course-package/levels.json",
   "modules": [
-    {"id":"foundations","order":1,"title":"مبانی","required":true},
-    {"id":"beginner","order":2,"title":"مقدماتی","required":true},
-    {"id":"advanced","order":3,"title":"پیشرفته","required":true},
-    {"id":"specialized","order":4,"title":"تخصصی","required":true}
+    {"id":"python-fundamentals","order":1,"title":"مبانی","required":true},
+    {"id":"python-beginner","order":2,"title":"مقدماتی","required":true},
+    {"id":"python-intermediate","order":3,"title":"متوسط","required":true},
+    {"id":"python-advanced","order":4,"title":"پیشرفته","required":true},
+    {"id":"python-specialist","order":5,"title":"تخصصی","required":true},
+    {"id":"python-projects","order":6,"title":"پروژه‌محور","required":true}
   ]
 }
