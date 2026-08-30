@@ -1,0 +1,11 @@
+{
+  "courseId":"python","strategy":"lesson-practice-assess-project-review","levels":[
+    {"levelId":"python-fundamentals","exerciseIds":["ex-001","ex-002","ex-003","ex-004","ex-005"],"quizIds":["q-001","q-002","q-003"],"projectIds":["calculator","grade-manager"],"reviewCheckpointId":"review-fundamentals"},
+    {"levelId":"python-beginner","exerciseIds":["ex-006","ex-007","ex-008","ex-009","ex-010"],"quizIds":["q-004","q-005","q-006"],"projectIds":["todo-cli","cli-finance"],"reviewCheckpointId":"review-beginner"},
+    {"levelId":"python-intermediate","exerciseIds":["ex-011","ex-012","ex-013","ex-016"],"quizIds":["q-007","q-008","q-015"],"projectIds":["invoice-domain","library-manager"],"reviewCheckpointId":"review-intermediate"},
+    {"levelId":"python-advanced","exerciseIds":["ex-014","ex-015","ex-017","ex-018"],"quizIds":["q-009","q-010","q-016","q-017"],"projectIds":["inventory-tests","async-jobs"],"reviewCheckpointId":"review-advanced"},
+    {"levelId":"python-specialist","exerciseIds":["ex-019","ex-020","ex-021","ex-022","ex-023","ex-024","ex-025","ex-026","ex-027","ex-028"],"quizIds":["q-011","q-012","q-013","q-014","q-018","q-019","q-020","q-021","q-022","q-023","q-024","q-025","q-026","q-027","q-028","q-029","q-030"],"projectIds":["billing-api","desktop-crm","browser-automation","telegram-reminder","data-dashboard","pytorch-classifier","rag-assistant","docker-fastapi"],"reviewCheckpointId":"review-specialist"},
+    {"levelId":"python-projects","exerciseIds":["ex-029","ex-030"],"quizIds":[],"projectIds":["production-capstone","capstone-production"],"reviewCheckpointId":"review-final"}
+  ],
+  "graduationFlow":["complete-required-lessons","pass-level-practice","complete-required-projects","pass-review-checkpoints","pass-final-exam","complete-production-capstone"]
+}
